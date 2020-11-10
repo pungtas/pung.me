@@ -9,13 +9,13 @@
 
 ## Peer-to-peer donations between tyron.did decentralized identities
 
-In times when people need it the most, the first use case for @tyrondid self-sovereign identities will be peer-to-peer donations - help your community :high_brightness:
+In times when people need it the most, the first use case for @tyrondid self-sovereign identities will be peer-to-peer donations - help your community!
 
 A react native decentralized app, pung.me is a prototype that allows your digital identity to send Xfers's $XSGD to another 'domain.did' with no tyronzil transaction fee, paying only for Zilliqa gas, currently less than $0.12.
 
 Donation campaign codes, e.g. 'covid-aid', get registered in your DID contract with a duration of 1 week.
 
-Read the user-owned DID smart contract [here](https://github.com/julio-cabdu/tyronZIL-js/blob/master/src/lib/blockchain/smart-contracts/didc.scilla) :zap:
+Read the user-owned DID smart contract [here](https://github.com/julio-cabdu/tyronZIL-js/blob/master/src/lib/blockchain/smart-contracts/didc.scilla).
 
 ```
 expo start
@@ -155,8 +155,8 @@ Demo file [here](./pungme-demo.webm).
     event e;
     Timestamp
   end
-
-  (* Transfers ZRC-2 verified tokens *)
+  
+  (* Transfers ZRC-2 SSI Tokens *)
   transition XTransfer(
     domain: String,
     token: String,
@@ -304,6 +304,7 @@ For the specific case when the xTransfer is a donation, the domain parameter MUS
     end
   end
   
+  (* Executes the payment to the agent and foundation *)
   procedure Payment(
     domain: String,
     agent: String
