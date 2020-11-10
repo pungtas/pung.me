@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
   title: {
     padding: 30,
     fontSize: 35,
-    color: '#008080'
+    color: '#5F9EA0'
   },
   tyron: {
     width: 350,
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   welcome: {
-    color: '#006400',
+    color: '#008080',
     fontSize: 22,
     marginBottom: 10
   },

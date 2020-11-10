@@ -1,7 +1,21 @@
-# $XSGD Hackathon
+<div align="center">
+<img src="./assets/tyron.png" alt="tyron" title="tyron-logo" width="400"/>
+</div>
+<div align="center">
+ <p><b>Own your data, empower your world!</b></p>
+</div>
+
+# $XSGD ZILHive Hackathon
+
 ## Peer-to-peer donations between tyron.did decentralized identities
 
-In times when some people need it the most, the first use case for tyronZIL digital identities will be peer-to-peer donations. 'Pung.me' is a react native open-source app that allows your self-sovereign identity to send $XSGD to another 'domain.did' with no tyronZIL transaction fee, paying only for Zilliqa gas. Donation campaign codes, e.g. 'covid-aid', get registered in your DID contract with a duration of 1 week.
+In times when people need it the most, the first use case for @tyrondid self-sovereign identities will be peer-to-peer donations - help your community :high_brightness:
+
+A react native decentralized app, pung.me is a prototype that allows your digital identity to send Xfers's $XSGD to another 'domain.did' with no tyronzil transaction fee, paying only for Zilliqa gas, currently less than $0.12.
+
+Donation campaign codes, e.g. 'covid-aid', get registered in your DID contract with a duration of 1 week.
+
+Read the user-owned DID smart contract [here](https://github.com/julio-cabdu/tyronZIL-js/blob/master/src/lib/blockchain/smart-contracts/didc.scilla) :zap:
 
 ```
 expo start
@@ -141,8 +155,8 @@ Demo file [here](./pungme-demo.webm).
     event e;
     Timestamp
   end
-  
-  (* Transfers ZRC-2 SSI Tokens *)
+
+  (* Transfers ZRC-2 verified tokens *)
   transition XTransfer(
     domain: String,
     token: String,
@@ -160,9 +174,7 @@ Demo file [here](./pungme-demo.webm).
     match is_enough with
       | True =>
           this_token_key <- verification_methods[token];
-          signed_data =
-            let hash = builtin sha256hash to in
-            builtin to_bystr hash;
+          signed_data = builtin to_bystr to;
           IsRightSignature signed_data signature this_token_key;
           this_proxy <- xProxies[token];
           match this_proxy with
@@ -292,7 +304,6 @@ For the specific case when the xTransfer is a donation, the domain parameter MUS
     end
   end
   
-  (* Executes the payment to the agent and foundation *)
   procedure Payment(
     domain: String,
     agent: String
