@@ -2,20 +2,20 @@
 <img src="./assets/tyron.png" alt="tyron" title="tyron-logo" width="400"/>
 </div>
 <div align="center">
- <p><b>Own your data, empower your world!</b></p>
+ <code>own your data, empower your world</code>
 </div>
 
 # $XSGD ZILHive Hackathon
 
-## Peer-to-peer donations between tyron.did decentralized identities
+## Peer-to-peer donations between digital identities
 
-In times when people need it the most, the first use case for @tyrondid self-sovereign identities will be peer-to-peer donations - help your community!
+In times when people need it the most, the first use case for Tyron self-sovereign identities will be peer-to-peer donations - help your community!
 
-A react native decentralized app, pung.me is a prototype that allows your digital identity to send Xfers's $XSGD to another 'domain.did' with no tyronzil transaction fee, paying only for Zilliqa gas, currently less than $0.12.
+A react native decentralized app, pung.me is a prototype that allows your digital identity to send Xfers's $XSGD to another 'domain.did' with no transaction fee, paying only for Zilliqa gas.
 
 Donation campaign codes, e.g. 'covid-aid', get registered in your DID contract with a duration of 1 week.
 
-Read the user-owned DID smart contract [here](https://github.com/julio-cabdu/tyronZIL-js/blob/master/src/lib/blockchain/smart-contracts/didc.scilla).
+Find the latest version of the user-owned DIDxWallet smart contract [here](https://github.com/pungtas/smart-contracts.tyron/blob/main/DID/DIDdapps/DIDxWallet.tyron.scilla).
 
 ```
 expo start
@@ -326,6 +326,6 @@ For the specific case when the xTransfer is a donation, the domain parameter MUS
   end
 ```
 
-You can also try out the DID-Client at [tyronZIL-js](https://github.com/julio-cabdu/tyronzil-js) & donate from the command-line interface:
+Try the [tyronzil](https://github.com/tralcanx/tyronzil) Node.js client & donate from the command-line interface:
 
 ```tyronzil donate```
